@@ -21,8 +21,6 @@ for i in range(len(text_list)):
 d = {'text': [text], 'sm': ['$GOOGL'], 'price + 1': [51.28]}
 news = pd.DataFrame(data=d)
 
-print(news.head())
-
 prediction = regressor.predict(news[['text', 'sm']])
 print(prediction)
 pred_score = mean_absolute_error(news['price + 1'], prediction)
